@@ -1,0 +1,5 @@
+*.zip
+*.log
+.cache/
+worker/
+node_modules/
