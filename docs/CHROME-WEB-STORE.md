@@ -1,6 +1,6 @@
 # Chrome 웹 스토어 등록 준비
 
-확인일: 2026-09-14 · 현재 배포: 1.8.1 · 아직 웹 스토어 등록/승인되지 않았습니다.
+확인일: 2026-10-14 · 현재 배포: 1.8.2 · 2026-10-14에 1.8.1 확장을 미등록 공개로 제출해 심사 중입니다. 항목 ID: `cebakkjjpinapjoplgkbekmcopoimpdf`
 
 ## 1. 개발자 계정
 
@@ -17,13 +17,13 @@
 
 준비가 끝나면 새 버전의 **`klef-extension-버전.zip`만** 대시보드의 새 항목에 업로드합니다. ZIP 맨 위에 `manifest.json`이 있어야 합니다. 워커 ZIP, Node.js, 모델, `.cmd`를 확장 ZIP에 섞지 마세요. 워커는 GitHub Releases에서 별도로 제공합니다. [공식 게시 절차](https://developer.chrome.com/docs/webstore/publish).
 
-스토어에서 설치한 확장 ID는 압축 해제 설치 때와 다릅니다. 업로드 후 정식 ID를 확인하고 네이티브 호스트의 `allowed_origins`에 그 ID를 등록해야 합니다. 현재는 워커 폴더에서 아래 명령으로 등록할 수 있습니다.
+스토어에서 설치한 확장 ID는 압축 해제 설치 때와 다릅니다. 정식 ID는 `cebakkjjpinapjoplgkbekmcopoimpdf`이고, 1.8.2부터 도우미 설치 파일과 `설치.cmd`가 이 ID를 네이티브 호스트의 `allowed_origins`에 자동으로 등록합니다. 압축 해제 설치 ID를 더 등록하려면 워커 폴더에서 아래 명령을 실행합니다. 이미 등록된 웹 스토어 ID는 남습니다.
 
 ```powershell
-npm.cmd run install-native-host -- --extension-id <스토어의-32자-ID>
+npm.cmd run install-native-host -- --extension-id <압축-해제-설치의-32자-ID>
 ```
 
-웹 스토어 설치만으로 PC의 도우미가 설치되거나 네이티브 호스트가 등록되지는 않습니다. 수동 `시작.cmd` 방식도 계속 지원됩니다. [공식 Native Messaging 안내](https://developer.chrome.com/docs/extensions/develop/concepts/native-messaging).
+웹 스토어 설치만으로 PC의 도우미가 설치되지는 않습니다. 사용자는 [설치 안내 페이지](https://jkf87.github.io/klef-collector-releases/)에서 `klef-helper-setup.exe`를 받아 한 번 실행합니다. 수동 `시작.cmd` 방식도 계속 지원됩니다. [공식 Native Messaging 안내](https://developer.chrome.com/docs/extensions/develop/concepts/native-messaging).
 
 ## 4. 스토어 설명 초안
 
@@ -33,7 +33,7 @@ npm.cmd run install-native-host -- --extension-id <스토어의-32자-ID>
 
 설명: 공문 목록에 요약·조치·기한·대상을 표시하고, 웹페이지에서 선택한 본문을 우클릭으로 요약합니다. 기본은 PC의 CPU 로컬 모델이며 로컬 도우미의 별도 설치가 필요합니다. 공문 요약에는 선택형 외부 API와 실험적인 Chrome 내장 AI를 지원합니다. 외부 API는 사용자가 설정하고 전송에 동의한 경우에만 이용하며 제공자 요금이 발생할 수 있습니다. 기관/Google의 공식 제품이 아니고 DRM 해제 기능은 없습니다. 작은 모델의 요약에는 사실·대상·기한 오류가 있을 수 있습니다.
 
-홈페이지: https://github.com/jkf87/klef-collector-releases
+홈페이지: https://jkf87.github.io/klef-collector-releases/ (설치 안내 페이지)
 
 지원 URL: https://github.com/jkf87/klef-collector-releases/issues
 
