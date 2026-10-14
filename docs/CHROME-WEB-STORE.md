@@ -1,6 +1,6 @@
 # Chrome 웹 스토어 등록 준비
 
-확인일: 2026-10-14 · 현재 배포: 1.8.2 · 2026-10-14에 1.8.1 확장을 미등록 공개로 제출해 심사 중입니다. 항목 ID: `cebakkjjpinapjoplgkbekmcopoimpdf`
+확인일: 2026-10-14 · 현재 배포: 1.8.3 · 2026-10-14에 1.8.1 확장을 미등록 공개로 제출해 심사 중입니다. 항목 ID: `cebakkjjpinapjoplgkbekmcopoimpdf`
 
 ## 1. 개발자 계정
 
